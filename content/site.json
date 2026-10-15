@@ -1,0 +1,60 @@
+{
+  "url": "",
+  "name": "Raman Mittal",
+  "role": "Professor of Law",
+  "affiliation": "Campus Law Centre, Faculty of Law, University of Delhi",
+  "affiliationUrl": "https://clc.du.ac.in/",
+  "tagline": "Teacher and scholar of intellectual property, contract and licensing law, who often finds his expression in poetry.",
+  "description": "Raman Mittal is a Professor of Law at Campus Law Centre, Faculty of Law, University of Delhi, working on intellectual property, contract, licensing, banking and insurance law, and the author of The Rhythm of Law, a collection of poems on law and justice.",
+  "photo": "assets/img/raman-mittal.jpg",
+  "shareImage": "assets/img/share-card.jpg",
+  "bio": [
+    "I am a Professor at <a href=\"https://clc.du.ac.in/\">Campus Law Centre</a>, Faculty of Law, <a href=\"https://www.du.ac.in/\">University of Delhi</a>. My research interests include Intellectual Property, Contract, Licensing, Banking and Insurance Laws. I am also interested in exploring the interaction between law, literature and religion. I often find my expression in the form of poetry."
+  ],
+  "interests": [
+    "Intellectual Property",
+    "Contract",
+    "Licensing",
+    "Banking and Insurance Laws",
+    "Law, literature and religion"
+  ],
+  "visitsIntro": "I have visited various institutions in the capacity of academic visitor, the prominent being:",
+  "visits": [
+    "University of Oxford",
+    "Max Planck Institute for Innovation and Competition",
+    "University of Washington",
+    "University of Tokyo",
+    "University of Seoul",
+    "International Institute of Human Rights",
+    "World Intellectual Property Organization",
+    "World Trade Organization"
+  ],
+  "service": [
+    {
+      "title": "Treaty negotiations",
+      "text": "I have advised the Government of India in treaty negotiations and was a member of the Indian Delegation to the World Intellectual Property Organization to negotiate international treaties in the area of copyright."
+    },
+    {
+      "title": "Indian Copyright Rules",
+      "text": "I was also a member of the Drafting Committee, which was tasked with drafting the Indian Copyright Rules."
+    }
+  ],
+  "address": [
+    "Campus Law Centre",
+    "Faculty of Law",
+    "University of Delhi",
+    "Delhi 110007"
+  ],
+  "emails": [
+    "rmittal@clc.du.ac.in",
+    "mittalraman@gmail.com"
+  ],
+  "linkedin": "https://www.linkedin.com/in/raman-mittal-3204587/",
+  "oldSite": "https://sites.google.com/view/ramanmittal",
+  "lecturePhoto": "",
+  "cutout": "assets/img/raman-mittal-cutout.webp",
+  "admin": {
+    "repo": "",
+    "branch": "main"
+  }
+}

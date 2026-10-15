@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Site admin | Raman Mittal</title>
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin">
+<header class="a-head">
+  <div class="a-wrap">
+    <a class="mark" href="../"><img src="../assets/img/favicon.svg" alt="" width="32" height="32"><span>Raman Mittal</span></a>
+    <span class="a-title">Site admin</span>
+    <span class="a-spacer"></span>
+    <a class="a-link" href="../" target="_blank" rel="noopener">View website</a>
+    <button class="a-link" id="signOut" type="button" hidden>Sign out</button>
+  </div>
+</header>
+
+<main class="a-wrap" id="app">
+
+  <!-- Sign in -->
+  <section class="card signin" id="signin" hidden>
+    <h1>Sign in</h1>
+    <p class="muted">Changes you make here are saved to the website's GitHub repository. The website updates itself about a minute after each save.</p>
+    <form id="signinForm" autocomplete="on">
+      <label>Repository <small>for example <code>yourname/raman-mittal-site</code></small>
+        <input name="repo" required placeholder="owner/repository" autocomplete="username"></label>
+      <label>Access key <small>the GitHub token created during setup</small>
+        <input name="token" type="password" required placeholder="github_pat_…" autocomplete="current-password"></label>
+      <details><summary>Advanced</summary>
+        <label>Branch <input name="branch" value="main"></label>
+      </details>
+      <label class="check"><input type="checkbox" name="remember" checked> Remember me on this computer</label>
+      <button class="btn btn-ink" type="submit">Sign in</button>
+      <p class="err" id="signinErr" role="alert"></p>
+    </form>
+  </section>
+
+  <!-- Workspace -->
+  <section id="work" hidden>
+    <nav class="tabs" role="tablist" aria-label="What to edit">
+      <button role="tab" data-tab="poems" aria-selected="true">Poems <span id="nPoems"></span></button>
+      <button role="tab" data-tab="books">Books <span id="nBooks"></span></button>
+      <button role="tab" data-tab="articles">Articles <span id="nArticles"></span></button>
+      <button role="tab" data-tab="profile">Profile</button>
+      <button role="tab" data-tab="import">Import</button>
+    </nav>
+
+    <!-- Poems -->
+    <section class="pane" data-pane="poems">
+      <div class="split-admin">
+        <aside class="list-col">
+          <button class="btn btn-ink full" type="button" id="newPoem">+ Add a new poem</button>
+          <input class="search-in" type="search" id="poemQ" placeholder="Find a poem">
+          <select id="poemTheme" aria-label="Show theme"><option value="">All themes</option></select>
+          <ul class="items" id="poemList"></ul>
+        </aside>
+        <div class="edit-col">
+          <form class="card editor" id="poemForm" hidden>
+            <h2 id="poemFormTitle">New poem</h2>
+            <label>Title <input name="title" required></label>
+            <div class="row2">
+              <label>Theme
+                <select name="theme" required></select></label>
+              <label>Date added <input name="added" type="date"></label>
+            </div>
+            <label class="newtheme" hidden>Name of the new theme <input name="newTheme" placeholder="e.g. Nature and Faith"></label>
+            <label class="check"><input type="checkbox" name="inBook"> This poem is in <em>The Rhythm of Law</em></label>
+            <div class="textarea-head">
+              <span>Poem</span>
+              <label class="filebtn">Load from a Word or text file<input type="file" id="poemFile" accept=".docx,.txt,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document"></label>
+            </div>
+            <textarea name="text" rows="18" class="poem-input" placeholder="Type or paste the poem here.&#10;Press Enter for a new line.&#10;&#10;Leave an empty line between stanzas."></textarea>
+            <details class="preview-box"><summary>Preview</summary><div class="poem" id="poemPreview"></div></details>
+            <div class="row2">
+              <label>Picture (optional)
+                <input type="file" name="image" accept="image/*"></label>
+              <div class="thumb" id="poemThumb"></div>
+            </div>
+            <label>Note below the poem (optional) <input name="note" placeholder="e.g. Written for the convocation, 2026"></label>
+            <div class="form-actions">
+              <button class="btn btn-ink" type="submit">Save poem</button>
+              <a class="btn btn-out" id="poemView" target="_blank" rel="noopener" hidden>View on website</a>
+              <span class="a-spacer"></span>
+              <button class="btn danger" type="button" id="poemDelete" hidden>Delete</button>
+            </div>
+          </form>
+          <div class="card hint" id="poemHint">
+            <h2>Poems</h2>
+            <p>Choose a poem on the left to edit it, or add a new one. Each poem gets its own page on the website, is listed under its theme, and shows a "New" label for 60 days.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Books -->
+    <section class="pane" data-pane="books" hidden>
+      <div class="split-admin">
+        <aside class="list-col">
+          <button class="btn btn-ink full" type="button" id="newBook">+ Add a book</button>
+          <ul class="items covers" id="bookList"></ul>
+        </aside>
+        <div class="edit-col">
+          <form class="card editor" id="bookForm" hidden>
+            <h2 id="bookFormTitle">New book</h2>
+            <label>Title <input name="title" required></label>
+            <label>Credit line <small>e.g. "Edited by Raman Mittal and Seema Singh" or "By Raman Mittal"</small><input name="credit"></label>
+            <div class="row3">
+              <label>Year <input name="year" type="number" min="1950" max="2100" required></label>
+              <label>Publisher <input name="publisher"></label>
+              <label>ISBN <input name="isbn"></label>
+            </div>
+            <label>Amazon link <input name="amazon" type="url" placeholder="https://www.amazon.in/…"></label>
+            <label>Google Books link (optional) <input name="google" type="url"></label>
+            <div class="row2">
+              <label>Cover picture <input type="file" name="coverFile" accept="image/*"></label>
+              <div class="thumb cover-thumb" id="bookThumb"></div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-ink" type="submit">Save book</button>
+              <button class="btn btn-out" type="button" id="bookUp">Move up</button>
+              <button class="btn btn-out" type="button" id="bookDown">Move down</button>
+              <span class="a-spacer"></span>
+              <button class="btn danger" type="button" id="bookDelete" hidden>Delete</button>
+            </div>
+          </form>
+          <div class="card hint" id="bookHint"><h2>Books</h2><p>Choose a book to edit it, or add a new one. Upload a cover picture and it appears on the Books page and the home page.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles -->
+    <section class="pane" data-pane="articles" hidden>
+      <div class="split-admin">
+        <aside class="list-col">
+          <button class="btn btn-ink full" type="button" id="newArticle">+ Add an article</button>
+          <ul class="items" id="articleList"></ul>
+        </aside>
+        <div class="edit-col">
+          <form class="card editor" id="articleForm" hidden>
+            <h2 id="articleFormTitle">New article</h2>
+            <label>Title <input name="title" required></label>
+            <label>Authors <small>separate with commas</small><input name="authors" required placeholder="Raman Mittal, Co-author Name"></label>
+            <label>Journal <input name="journal" required></label>
+            <div class="row4">
+              <label>Volume <input name="volume"></label>
+              <label>Issue <input name="issue"></label>
+              <label>Pages <input name="pages" placeholder="191–204"></label>
+              <label>Year <input name="year" type="number" min="1950" max="2100" required></label>
+            </div>
+            <div class="row2">
+              <label>Date as shown <input name="dateLabel" placeholder="September 2024"></label>
+              <label>DOI <input name="doi" placeholder="10.xxxx/…"></label>
+            </div>
+            <label>Journal page link <input name="page" type="url"></label>
+            <div class="row2">
+              <label>PDF link <input name="pdf" placeholder="https://… or upload a PDF"></label>
+              <label>…or upload the PDF <input type="file" name="pdfFile" accept="application/pdf"></label>
+            </div>
+            <label>Keywords <small>separate with commas</small><input name="keywords"></label>
+            <label>Abstract <small>the published abstract (shown if filled in)</small><textarea name="abstract" rows="6"></textarea></label>
+            <label>Summary <small>shown when there is no abstract</small><textarea name="summary" rows="5"></textarea></label>
+            <label>How to cite <button class="mini" type="button" id="makeCite">Write it for me</button><textarea name="citation" rows="3"></textarea></label>
+            <div class="form-actions">
+              <button class="btn btn-ink" type="submit">Save article</button>
+              <a class="btn btn-out" id="articleView" target="_blank" rel="noopener" hidden>View on website</a>
+              <span class="a-spacer"></span>
+              <button class="btn danger" type="button" id="articleDelete" hidden>Delete</button>
+            </div>
+          </form>
+          <div class="card hint" id="articleHint"><h2>Articles</h2><p>Each article gets its own page with the abstract or summary, keywords, DOI, a citation and the PDF.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile -->
+    <section class="pane" data-pane="profile" hidden>
+      <form class="card editor wide" id="profileForm">
+        <h2>Profile</h2>
+        <label>Title <input name="role"></label>
+        <label>Affiliation <input name="affiliation"></label>
+        <label>One-line introduction on the home page <textarea name="tagline" rows="2"></textarea></label>
+        <label>About <small>leave an empty line between paragraphs</small><textarea name="bio" rows="7"></textarea></label>
+        <label>Research interests <small>separate with commas</small><input name="interests"></label>
+        <label>Academic visits <small>one institution per line</small><textarea name="visits" rows="8"></textarea></label>
+        <label>Emails <small>separate with commas</small><input name="emails"></label>
+        <label>LinkedIn link <input name="linkedin" type="url"></label>
+        <div class="row2">
+          <label>New cover photo (optional) <input type="file" name="photo" accept="image/*"></label>
+          <div class="thumb" id="photoThumb"></div>
+        </div>
+        <div class="form-actions"><button class="btn btn-ink" type="submit">Save profile</button></div>
+      </form>
+    </section>
+
+    <!-- Import -->
+    <section class="pane" data-pane="import" hidden>
+      <div class="card wide">
+        <h2>Import from the old Google Site</h2>
+        <p>Copies the text of every poem from the old site into this website, so each poem gets its full page. Poems you have already filled in here are left alone. It takes about two minutes, then the website updates itself.</p>
+        <div class="form-actions"><button class="btn btn-ink" type="button" data-run="poems">Import poems now</button></div>
+        <hr>
+        <h2>Find book covers</h2>
+        <p>Looks up each book's cover by its ISBN and Amazon link and adds the pictures. Books with a cover already are left alone. You can always upload a cover yourself on the Books tab.</p>
+        <div class="form-actions"><button class="btn btn-ink" type="button" data-run="covers">Find covers now</button></div>
+        <p class="runstatus" id="runStatus"></p>
+      </div>
+    </section>
+  </section>
+
+  <p class="loading" id="loading" hidden>Loading…</p>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script src="admin.js" defer></script>
+</body>
+</html>

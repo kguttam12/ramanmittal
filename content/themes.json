@@ -1,0 +1,10 @@
+[
+  { "key": "truth", "name": "Truth" },
+  { "key": "justice", "name": "Justice" },
+  { "key": "relationship-between-law-and-justice", "name": "Relationship between Law and Justice", "short": "Law and Justice" },
+  { "key": "duties-and-rights", "name": "Duties and Rights" },
+  { "key": "environment", "name": "Environment" },
+  { "key": "intellectual-property", "name": "Intellectual Property" },
+  { "key": "life", "name": "Life" },
+  { "key": "love", "name": "Love" }
+]
