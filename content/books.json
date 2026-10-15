@@ -4,36 +4,60 @@
     "year": 2024,
     "title": "Law and Spirituality: Reconnecting the Bond",
     "credit": "Edited by Raman Mittal and Seema Singh",
-    "editors": ["Raman Mittal", "Seema Singh"],
+    "editors": [
+      "Raman Mittal",
+      "Seema Singh"
+    ],
     "publisher": "Kitabwale",
     "isbn": "9395472669",
     "cover": "",
-    "links": [["Buy on Amazon", "https://www.amazon.in/Law-Spirituality-Prof-Raman-Mittal/dp/9395472669"]]
+    "links": [
+      [
+        "Buy on Amazon",
+        "https://www.amazon.in/Law-Spirituality-Prof-Raman-Mittal/dp/9395472669"
+      ]
+    ]
   },
   {
     "slug": "the-rhythm-of-law",
     "year": 2023,
     "title": "The Rhythm of Law",
     "credit": "Poems by Raman Mittal",
-    "authors": ["Raman Mittal"],
+    "authors": [
+      "Raman Mittal"
+    ],
     "publisher": "Satyam Books",
     "isbn": "938304358X",
     "cover": "",
     "page": "research/books/the-rhythm-of-law/",
-    "links": [["Buy on Amazon", "https://www.amazon.in/Rhythm-Law-Raman-Mittal/dp/938304358X"]]
+    "links": [
+      [
+        "Buy on Amazon",
+        "https://www.amazon.in/Rhythm-Law-Raman-Mittal/dp/938304358X"
+      ]
+    ]
   },
   {
     "slug": "relevance-of-duties",
     "year": 2023,
     "title": "Relevance of Duties in the Contemporary World",
     "credit": "Edited by Raman Mittal and Kshitij Kumar Singh",
-    "editors": ["Raman Mittal", "Kshitij Kumar Singh"],
+    "editors": [
+      "Raman Mittal",
+      "Kshitij Kumar Singh"
+    ],
     "publisher": "Springer",
     "isbn": "981191835X",
-    "cover": "",
+    "cover": "assets/img/books/relevance-of-duties.jpg",
     "links": [
-      ["Buy on Amazon", "https://www.amazon.in/Relevance-Duties-Contemporary-World-Emphasis/dp/981191835X"],
-      ["Google Books", "https://books.google.co.in/books/about/Relevance_of_Duties_in_the_Contemporary.html?id=d9SkEAAAQBAJ"]
+      [
+        "Buy on Amazon",
+        "https://www.amazon.in/Relevance-Duties-Contemporary-World-Emphasis/dp/981191835X"
+      ],
+      [
+        "Google Books",
+        "https://books.google.co.in/books/about/Relevance_of_Duties_in_the_Contemporary.html?id=d9SkEAAAQBAJ"
+      ]
     ]
   },
   {
@@ -41,13 +65,22 @@
     "year": 2012,
     "title": "Legal Aid: Catalyst for Social Change",
     "credit": "Edited by Raman Mittal and K.V. Sreemithun",
-    "editors": ["Raman Mittal", "K.V. Sreemithun"],
+    "editors": [
+      "Raman Mittal",
+      "K.V. Sreemithun"
+    ],
     "publisher": "Satyam Law International",
     "isbn": "8192120422",
     "cover": "",
     "links": [
-      ["Buy on Amazon", "https://www.amazon.in/Legal-Aid-Catalyst-Social-Change/dp/8192120422"],
-      ["Google Books", "https://books.google.co.in/books?id=al6y7aEqgzsC"]
+      [
+        "Buy on Amazon",
+        "https://www.amazon.in/Legal-Aid-Catalyst-Social-Change/dp/8192120422"
+      ],
+      [
+        "Google Books",
+        "https://books.google.co.in/books?id=al6y7aEqgzsC"
+      ]
     ]
   },
   {
@@ -55,10 +88,17 @@
     "year": 2011,
     "title": "Licensing Intellectual Property: Law & Management",
     "credit": "By Raman Mittal",
-    "authors": ["Raman Mittal"],
+    "authors": [
+      "Raman Mittal"
+    ],
     "publisher": "Satyam Law International",
     "isbn": "",
     "cover": "",
-    "links": [["Buy on Amazon", "https://www.amazon.in/Licensing-Intellectual-Property-Law-Management/dp/B005WPWYES"]]
+    "links": [
+      [
+        "Buy on Amazon",
+        "https://www.amazon.in/Licensing-Intellectual-Property-Law-Management/dp/B005WPWYES"
+      ]
+    ]
   }
 ]
