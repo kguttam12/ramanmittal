@@ -1,5 +1,5 @@
 {
-  "url": "",
+  "url": "https://ramanmittal.netlify.app",
   "name": "Raman Mittal",
   "role": "Professor of Law",
   "affiliation": "Campus Law Centre, Faculty of Law, University of Delhi",
@@ -54,7 +54,7 @@
   "lecturePhoto": "",
   "cutout": "assets/img/raman-mittal-cutout.webp",
   "admin": {
-    "repo": "",
+    "repo": "uttam/ramanmittal",
     "branch": "main"
   }
 }
