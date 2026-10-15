@@ -62,13 +62,9 @@
     "year": 2012,
     "title": "Legal Aid: Catalyst for Social Change",
     "credit": "Edited by Raman Mittal and K.V. Sreemithun",
-    "editors": [
-      "Raman Mittal",
-      "K.V. Sreemithun"
-    ],
     "publisher": "Satyam Law International",
     "isbn": "8192120422",
-    "cover": "",
+    "cover": "assets/img/books/legal-aid.jpg",
     "links": [
       [
         "Buy on Amazon",
@@ -78,6 +74,10 @@
         "Google Books",
         "https://books.google.co.in/books?id=al6y7aEqgzsC"
       ]
+    ],
+    "editors": [
+      "Raman Mittal",
+      "K.V. Sreemithun"
     ]
   },
   {
