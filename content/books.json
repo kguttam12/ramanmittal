@@ -85,17 +85,17 @@
     "year": 2011,
     "title": "Licensing Intellectual Property: Law & Management",
     "credit": "By Raman Mittal",
-    "authors": [
-      "Raman Mittal"
-    ],
     "publisher": "Satyam Law International",
     "isbn": "",
-    "cover": "",
+    "cover": "assets/img/books/licensing-intellectual-property.jpg",
     "links": [
       [
         "Buy on Amazon",
         "https://www.amazon.in/Licensing-Intellectual-Property-Law-Management/dp/B005WPWYES"
       ]
+    ],
+    "authors": [
+      "Raman Mittal"
     ]
   }
 ]
